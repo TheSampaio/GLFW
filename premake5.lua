@@ -6,8 +6,8 @@ project "GLFW"
     kind "StaticLib"
     language "C"
 
-    targetdir "bin/%{cfg.buildcfg}"
-    objdir "obj/%{cfg.buildcfg}"
+    targetdir "build/bin/%{cfg.buildcfg}"
+    objdir "build/obj/%{cfg.buildcfg}"
 
     files { "source/*.c", "include/GLFW/*.h" }
     
