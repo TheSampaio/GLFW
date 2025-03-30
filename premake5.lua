@@ -1,13 +1,10 @@
-workspace "GLFW"
-    configurations { "Debug", "Release" }
-    location "build"
-
 project "GLFW"
     kind "StaticLib"
     language "C"
+    location "build"
 
-    targetdir "build/bin/%{cfg.buildcfg}"
-    objdir "build/obj/%{cfg.buildcfg}"
+    targetdir ("Build/Bin/%{cfg.buildcfg}/%{prj.name}")
+    objdir    ("Build/Obj/%{cfg.buildcfg}/%{prj.name}")
 
     files { "source/*.c", "include/GLFW/*.h" }
     
