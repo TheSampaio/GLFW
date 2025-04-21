@@ -3,8 +3,8 @@ project "glfw"
     language "C"
     location "build"
 
-    targetdir ("Build/Bin/%{cfg.buildcfg}/%{prj.name}")
-    objdir    ("Build/Obj/%{cfg.buildcfg}/%{prj.name}")
+    targetdir (".Out/Bin/" .. output_dir .. "%{prj.name}")
+    objdir    (".Out/Obj/" .. output_dir .. "%{prj.name}")
 
     files { "source/*.c", "include/GLFW/*.h" }
     
